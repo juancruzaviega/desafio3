@@ -7,7 +7,7 @@ class Container {
     async getAll() {
         try {
             let products = await fs.readFile(this.route, 'utf-8')
-            return JSON.parse(products)
+            return JSON.stringify(products)
         } catch (error) {
             console.error('Error de lectura.')
             console.error(error)
